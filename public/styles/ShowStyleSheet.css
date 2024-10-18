@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+      --yellow: #ffbd13;
+      --blue: #4383ff;
+      --blue-d-1: #3278ff;
+      --light: #f5f5f5;
+      --grey: #aaa;
+      --white: #fff;
+      --shadow: 8px 8px 30px rgba(0, 0, 0, 0.05);
+}
+body,
+html {
+      height: 100%;
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+}
+.exploreContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.staticBottom {
+      position: fixed;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      bottom: 13px;
+      right: 13px;
+      font-size: 14px;
+      font-weight: 500;
+      width: 27em;
+      height: 2.5em;
+      background-color: #fff;
+      color: #484848;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 2.6em;
+      text-decoration: none;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+      z-index: 2;
+}
+
+.staticBottom svg {
+      height: 15px;
+      width: 15px;
+      display: block;
+      fill: #484848;
+}
+
+body a {
+      text-decoration: none !important;
+}
+.container-fluid {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+}
+.CustomImage {
+      position: absolute;
+      width: 100vw;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      object-fit: cover;
+}
+
+.headerMain {
+      height: 5em;
+}
+
+.headerLeft,
+.headerRight {
+      padding: 0;
+}
+
+@media (max-width: 1350px) {
+      .headerRight {
+            visibility: hidden;
+      }
+}
+
+.headerRight a {
+      height: 5em;
+      text-decoration: none;
+}
+
+.headerRight a div {
+      border-bottom: 0.125em solid transparent;
+      font-size: 15px;
+}
+
+.headerRight a div:hover {
+      border-bottom: 0.125em solid white;
+}
+
+.airbnbLogo {
+      height: 2.125em;
+      width: 2.125em;
+      margin: 1.4em;
+}
+
+.airbnbLogo svg {
+      fill: white;
+}
+
+.blankHeader {
+      height: 100%;
+      width: 100%;
+}
+
+.reservationCard {
+      margin: 2em;
+      width: 27.5em;
+      height: 30em;
+      /* background-color: red ; */
+}
+
+.card {
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+      background-color: #e0dada;
+}
+.location {
+      background-color: rgb(59, 179, 135);
+      padding: 5px 8px;
+      border-radius: 25px;
+      color: white;
+      width: fit-content;
+}
+.color {
+      background-color: rgb(90, 159, 159);
+      padding: 5px 8px;
+      border-radius: 25px;
+      color: white;
+      width: 60%;
+}
+.cardTitle {
+      font-size: 12px;
+      font-weight: bold;
+}
+.description {
+      font-size: 20px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid black;
+      color: #484848;
+}
+.descriptionLine {
+      opacity: 0.8;
+}
+.cardHeaderTitle {
+      font-size: 2em;
+      font-weight: bold;
+      color: #484848;
+}
+
+.textDecorationNone {
+      text-decoration: none !important;
+}
+
+.exploreHeader {
+      color: #484848;
+      font-size: 1.5em;
+      font-weight: 800;
+      height: 30px;
+      letter-spacing: normal;
+      line-height: 30px;
+      margin-top: 1em;
+}
+
+.miniCardImg {
+      width: 6em;
+      height: 4.5em;
+}
+
+.miniCardText {
+      width: 7em;
+      padding-left: 1em;
+      color: #484848;
+}
+
+.airbnbPlusText {
+      font-size: 12px;
+      font-weight: 800;
+      color: #af2e2e;
+}
+
+.cardBorderNone {
+      border: none;
+      box-shadow: none;
+}
+
+.rightArrowHover {
+      display: none;
+}
+
+.hoverParentdiv div:hover .rightArrowHover {
+      display: block;
+}
+
+.rateCounter {
+      font-size: 12px;
+      color: #008489;
+      font-weight: bold;
+}
+
+.ShowExperiences {
+      color: #008489 !important;
+}
+
+.wrapper {
+      background: var(--white);
+      padding: 2rem;
+      max-width: 576px;
+      width: 100%;
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+}
+.wrapper h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+}
+.rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-gap: 0.5rem;
+      font-size: 2rem;
+      color: var(--yellow);
+      margin-bottom: 2rem;
+}
+.rating .star {
+      cursor: pointer;
+}
+.rating .star.active {
+      opacity: 0;
+      animation: animate 0.5s calc(var(--i) * 0.1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+      0% {
+            opacity: 0;
+            transform: scale(1);
+      }
+      50% {
+            opacity: 1;
+            transform: scale(1.2);
+      }
+      100% {
+            opacity: 1;
+            transform: scale(1);
+      }
+}
+
+.rating .star:hover {
+      transform: scale(1.1);
+}
+textarea {
+      width: 100%;
+      background: var(--light);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: none;
+      outline: none;
+      resize: none;
+      margin-bottom: 0.5rem;
+}
+.btn-group {
+      display: flex;
+      grid-gap: 0.5rem;
+      align-items: center;
+}
+.btn-group .btn {
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+}
+.btn-group .btn.submit {
+      background: var(--blue);
+      color: var(--white);
+}
+.btn-group .btn.submit:hover {
+      background: var(--blue-d-1);
+}
+.btn-group .btn.cancel {
+      background: var(--white);
+      color: var(--blue);
+}
+.btn-group .btn.cancel:hover {
+      background: var(--light);
+}
+.notification {
+      display: flex;
+      flex-direction: column;
+      isolation: isolate;
+      position: relative;
+      height: 8rem;
+      background: #dcd0c7;
+      border-radius: 1rem;
+      overflow: hidden;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-size: 16px;
+      --gradient: linear-gradient(to bottom, #d05f5f, #dd5f5f, #ffffff);
+      --color: #000000;
+}
+
+.notification:before {
+      position: absolute;
+      content: "";
+      inset: 0.0625rem;
+      border-radius: 0.9375rem;
+      background: #dcd0c7;
+      z-index: 2;
+}
+
+.notification:after {
+      position: absolute;
+      content: "";
+      width: 0.25rem;
+      inset: 0.65rem auto 0.65rem 0.5rem;
+      border-radius: 0.125rem;
+      background: var(--gradient);
+      transition: transform 300ms ease;
+      z-index: 4;
+}
+
+.notification:hover:after {
+      transform: translateX(0.15rem);
+}
+
+.notititle {
+      color: var(--color);
+      padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: transform 300ms ease;
+      z-index: 5;
+}
+
+.notification:hover .notititle {
+      transform: translateX(0.15rem);
+}
+
+.notibody {
+      color: #6b6565;
+      padding: 0 1.25rem;
+      transition: transform 300ms ease;
+      z-index: 5;
+}
+
+.notification:hover .notibody {
+      transform: translateX(0.25rem);
+}
+
+.notiglow,
+.notiborderglow {
+      position: absolute;
+      width: 20rem;
+      height: 20rem;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle closest-side at center, white, transparent);
+      opacity: 0;
+      transition: opacity 300ms ease;
+}
+
+.notiglow {
+      z-index: 3;
+}
+.auth {
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      right: 0;
+      font-size: 1.1rem;
+      text-decoration: underline;
+      font-style: italic;
+      padding: 1rem;
+      opacity: 0.8;
+}
+.notiborderglow {
+      z-index: 1;
+}
+
+.notification:hover .notiglow {
+      opacity: 0.1;
+}
+
+.notification:hover .notiborderglow {
+      opacity: 0.1;
+}
+
+.note {
+      color: var(--color);
+      position: fixed;
+      top: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 0.9rem;
+      width: 75%;
+}
+.Allreview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+      padding: 1.2rem;
+}
+.reviewH1 {
+      font-size: 1.5rem;
+      text-align: center;
+}
+.Delete {
+      padding: 0.5rem;
+      width: 4.5rem;
+      font-size: 0.8rem;
+      color: rgb(255, 131, 131);
+      background-color: #9f0909;
+      border-radius: 20px;
+      outline: none;
+      border: none;
+      z-index: 100;
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+}
